@@ -1,0 +1,21 @@
+﻿@model AgendaContatosMVC.Models.Contato
+
+@{
+    ViewData["Title"] = "Detalhes do Contato";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-12">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Nome</h5>
+                <p class="card-text"><strong>Telefone:</strong> @Model.Telefone</p>
+                <p class="card-text"><strong>Email:</strong> @Model.Email</p>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>
