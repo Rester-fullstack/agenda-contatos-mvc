@@ -1,117 +1,109 @@
-# Agenda de Contatos com ASP.NET MVC
+Agenda de Contatos – ASP.NET MVC
 
-Uma aplicação web para gerenciar uma agenda de contatos com funcionalidades de cadastro, edição, exclusão e busca, utilizando ASP.NET MVC, Entity Framework Core e Bootstrap.
+Uma aplicação web completa para gerenciamento de contatos, desenvolvida com ASP.NET Core MVC, Entity Framework Core e Bootstrap 5.
+Permite cadastrar, visualizar, editar, buscar e excluir contatos de forma simples e intuitiva.
 
----
+🚀 Tecnologias Utilizadas
 
-## Índice
+ASP.NET Core MVC (.NET 7)
 
-- [Tecnologias](#tecnologias)
-- [Funcionalidades](#funcionalidades)
-- [Pré-requisitos](#pré-requisitos)
-- [Configuração](#configuração)
-- [Execução](#execução)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Como contribuir](#como-contribuir)
-- [Licença](#licença)
-- [Autor](#autor)
+Entity Framework Core 7 (Code First)
 
----
+SQL Server LocalDB
 
-## Tecnologias
+Bootstrap 5
 
-- ASP.NET Core MVC (.NET 7)
-- Entity Framework Core 7 (Code First)
-- Bootstrap 5
-- SQL Server LocalDB
-- Visual Studio 2022 (ou superior)
+C#
 
----
+Visual Studio 2022
 
-## Funcionalidades
+📌 Funcionalidades
 
-- Cadastro de contatos com nome, telefone e email.
-- Busca por nome na lista de contatos.
-- Edição e exclusão de contatos.
-- Interface responsiva utilizando Bootstrap.
-- Uso de migrações para criação e atualização do banco de dados.
-- Visualização dos detalhes do contato.
+✔️ Cadastro de novos contatos
+✔️ Edição de contatos existentes
+✔️ Exclusão de contatos
+✔️ Busca por nome
+✔️ Visualização detalhada do contato
+✔️ Interface responsiva (Bootstrap)
+✔️ Banco criado via Migrations (EF Core)
 
----
+📂 Estrutura do Projeto
+agenda-contatos-mvc/
+│
+├── Controllers/         # Controladores MVC
+├── Models/              # Modelos (Contato)
+├── Views/               # Views Razor (Lista, Criar, Editar, etc.)
+├── Data/                # AppDbContext (EF Core)
+├── Migrations/          # Migrations do EF Core
+├── wwwroot/             # Arquivos estáticos (CSS, JS, imagens)
+├── appsettings.json     # String de conexão e configurações
+├── Program.cs           # Configuração da aplicação
+└── AgendaContatosMVC.csproj
 
-## Pré-requisitos
+🛠️ Pré-requisitos
 
-- [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
-- SQL Server Express LocalDB (instalado com Visual Studio)
-- Git (para controle de versão)
+Antes de rodar o projeto, certifique-se de ter instalado:
 
----
+✔️ .NET 7 SDK
 
-## Configuração
+✔️ Visual Studio 2022 (com ASP.NET e desenvolvimento web)
 
-1. **Clone este repositório**
+✔️ SQL Server Express LocalDB
 
-git clone https://github.com/SEU_USUARIO/agenda-contatos-mvc.git
+✔️ Git
+
+🔧 Configuração e Instalação
+1️⃣ Clonar o repositório
+git clone https://github.com/Rester-fullstack/agenda-contatos-mvc.git
 cd agenda-contatos-mvc
 
-2. **Configure a string de conexão
+2️⃣ Ajustar a Connection String
 
-No arquivo appsettings.json, verifique se a connection string está assim (ajuste conforme necessário):
+Edite o arquivo appsettings.json se necessário:
 
 "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=AgendaContatosDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 
-3. **Restaurar pacotes NuGet
-
-Se estiver usando Visual Studio, normalmente ele restaura automaticamente. Se quiser via terminal:
-
+3️⃣ Restaurar os pacotes
 dotnet restore
 
---Execução
+4️⃣ Criar o banco e rodar as migrations
+dotnet ef database update
 
-  Usando Visual Studio
-  
-  Abra o arquivo .sln no Visual Studio.
-  
-  Certifique-se que o projeto está setado como startup.
-  
-  Execute com F5 (modo Debug) ou Ctrl + F5 (sem Debug).
+5️⃣ Rodar a aplicação
+dotnet run
 
---Usando linha de comando
 
-Para criar o banco e rodar as migrations:
+Ou simplesmente F5 no Visual Studio.
 
-  dotnet ef database update
-  
-Para rodar a aplicação:
+🤝 Como Contribuir
 
-  dotnet run
+Faça um fork do repositório
 
---Estrutura do projeto
+Crie uma branch:
 
-  Controllers/ - Controladores MVC (gerenciam as requisições HTTP)
-  
-  Models/ - Classes de domínio (Contato.cs)
-  
-  Views/ - Views Razor para interface (Contatos)
-  
-  Data/ - Contexto do Entity Framework (AppDbContext.cs)
-  
-  wwwroot/ - Arquivos estáticos (CSS, JS, imagens)
-  
-  Program.cs - Configuração da aplicação e serviços
-  
-  appsettings.json - Configurações gerais, incluindo string de conexão
+git checkout -b feature/minha-feature
 
---Como contribuir
-  Faça um fork deste repositório.
-  
-  Crie uma branch para sua feature (git checkout -b feature/nome-da-feature).
-  
-  Faça commit das suas alterações (git commit -m "Descrição da feature").
-  
-  Envie para sua branch no GitHub (git push origin feature/nome-da-feature).
-  
-  Abra um Pull Request neste repositório.
+
+Faça commit:
+
+git commit -m "Minha nova feature"
+
+
+Envie para o GitHub:
+
+git push origin feature/minha-feature
+
+
+Abra um Pull Request 🎉
+
+👩‍💻 Autora
+
+Ester da Costa Batista
+Desenvolvedora C# e estudante de desenvolvimento fullstack.
+
+📄 Licença
+
+Este projeto está licenciado sob a MIT License.
+Sinta-se livre para usar e modificar.
