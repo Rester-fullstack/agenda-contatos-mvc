@@ -1,109 +1,161 @@
-Agenda de Contatos – ASP.NET MVC
+# 📇 Agenda de Contatos
 
-Uma aplicação web completa para gerenciamento de contatos, desenvolvida com ASP.NET Core MVC, Entity Framework Core e Bootstrap 5.
-Permite cadastrar, visualizar, editar, buscar e excluir contatos de forma simples e intuitiva.
+Aplicação web desenvolvida com **ASP.NET Core MVC** para gerenciamento de contatos, utilizando **Entity Framework Core** e **SQL Server**.
 
-🚀 Tecnologias Utilizadas
+O sistema permite cadastrar, consultar, editar, pesquisar e excluir contatos por meio de uma interface web responsiva construída com Bootstrap.
 
-ASP.NET Core MVC (.NET 7)
+---
 
-Entity Framework Core 7 (Code First)
+## 🚀 Funcionalidades
 
-SQL Server LocalDB
+- 📋 Listagem de contatos
+- ➕ Cadastro de novos contatos
+- ✏️ Edição de contatos
+- 🗑️ Exclusão de contatos
+- 🔍 Pesquisa por nome
+- 👤 Visualização dos detalhes do contato
+- ✅ Validação de dados
+- 💾 Persistência de dados com Entity Framework Core
 
-Bootstrap 5
+---
 
-C#
+## 🛠️ Tecnologias Utilizadas
 
-Visual Studio 2022
+- C#
+- ASP.NET Core MVC (.NET 8)
+- Entity Framework Core
+- SQL Server / LocalDB
+- Razor Views
+- Bootstrap 5
 
-📌 Funcionalidades
+---
 
-✔️ Cadastro de novos contatos
-✔️ Edição de contatos existentes
-✔️ Exclusão de contatos
-✔️ Busca por nome
-✔️ Visualização detalhada do contato
-✔️ Interface responsiva (Bootstrap)
-✔️ Banco criado via Migrations (EF Core)
+## 📂 Estrutura do Projeto
 
-📂 Estrutura do Projeto
-agenda-contatos-mvc/
+```text
+agenda-contatos-mvc
 │
-├── Controllers/         # Controladores MVC
-├── Models/              # Modelos (Contato)
-├── Views/               # Views Razor (Lista, Criar, Editar, etc.)
-├── Data/                # AppDbContext (EF Core)
-├── Migrations/          # Migrations do EF Core
-├── wwwroot/             # Arquivos estáticos (CSS, JS, imagens)
-├── appsettings.json     # String de conexão e configurações
-├── Program.cs           # Configuração da aplicação
+├── Controllers
+├── Data
+├── Migrations
+├── Models
+├── Views
+├── wwwroot
+│
+├── Program.cs
+├── appsettings.json
 └── AgendaContatosMVC.csproj
+```
 
-🛠️ Pré-requisitos
+---
 
-Antes de rodar o projeto, certifique-se de ter instalado:
+## 🏗️ Arquitetura
 
-✔️ .NET 7 SDK
+```text
+Navegador
+      │
+      ▼
+Controllers
+      │
+      ▼
+Models
+      │
+      ▼
+Entity Framework Core
+      │
+      ▼
+SQL Server
+```
 
-✔️ Visual Studio 2022 (com ASP.NET e desenvolvimento web)
+---
 
-✔️ SQL Server Express LocalDB
+## ▶️ Como executar
 
-✔️ Git
+### Clone o repositório
 
-🔧 Configuração e Instalação
-1️⃣ Clonar o repositório
+```bash
 git clone https://github.com/Rester-fullstack/agenda-contatos-mvc.git
+```
+
+Entre na pasta do projeto
+
+```bash
 cd agenda-contatos-mvc
+```
 
-2️⃣ Ajustar a Connection String
+### Configure a conexão
 
-Edite o arquivo appsettings.json se necessário:
+No arquivo **appsettings.json**:
 
+```json
 "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=AgendaContatosDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
+```
 
-3️⃣ Restaurar os pacotes
-dotnet restore
+### Crie o banco de dados
 
-4️⃣ Criar o banco e rodar as migrations
+```bash
 dotnet ef database update
+```
 
-5️⃣ Rodar a aplicação
+### Execute a aplicação
+
+```bash
 dotnet run
+```
 
+---
 
-Ou simplesmente F5 no Visual Studio.
+## 📸 Screenshots
 
-🤝 Como Contribuir
+Adicione imagens como:
 
-Faça um fork do repositório
+- Tela inicial
+- Lista de contatos
+- Cadastro
+- Edição
+- Pesquisa
 
-Crie uma branch:
+---
 
-git checkout -b feature/minha-feature
+## 📚 Objetivos do Projeto
 
+Este projeto foi desenvolvido para praticar:
 
-Faça commit:
+- ASP.NET Core MVC
+- Entity Framework Core
+- SQL Server
+- CRUD completo
+- Razor Views
+- Bootstrap
+- Migrations
+- Arquitetura MVC
 
-git commit -m "Minha nova feature"
+---
 
+## 👩‍💻 Desenvolvedora
 
-Envie para o GitHub:
+**Ester da Costa Batista**
 
-git push origin feature/minha-feature
+Desenvolvedora Full Stack
 
+### Tecnologias
 
-Abra um Pull Request 🎉
+- C#
+- .NET
+- ASP.NET Core
+- React
+- SQL Server
+- Entity Framework Core
+- APIs REST
 
-👩‍💻 Autora
+GitHub:
 
-Ester da Costa Batista
-Desenvolvedora C# e estudante de desenvolvimento fullstack.
+https://github.com/Rester-fullstack
 
-📄 Licença
+---
 
-Este projeto está licenciado sob a MIT License.
-Sinta-se livre para usar e modificar.
+## 📄 Licença
+
+Projeto desenvolvido para fins de estudo e portfólio.
